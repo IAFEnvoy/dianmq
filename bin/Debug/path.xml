@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Filepath>
+    <!--名单路径-->
+    <Data0>
+      <Path>E:\code\repos\点名器\bin\Debug\list.txt</Path>
+      <Checked>True</Checked>
+    </Data0>
+  </Filepath>
+  <Setting>True</Setting>
+</Data>
