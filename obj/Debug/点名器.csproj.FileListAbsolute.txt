@@ -27,3 +27,18 @@ E:\code\repos\点名器\obj\Debug\点名器.exe
 E:\code\repos\点名器\obj\Debug\点名器.pdb
 E:\code\repos\点名器\bin\Debug\path.xml
 E:\code\repos\点名器\obj\Debug\点名器.csproj.AssemblyReference.cache
+E:\From Github\dianmq\obj\Debug\点名器.csproj.AssemblyReference.cache
+E:\From Github\dianmq\obj\Debug\点名器.Form1.resources
+E:\From Github\dianmq\obj\Debug\点名器.csproj.GenerateResource.cache
+E:\From Github\dianmq\obj\Debug\点名器.exe
+E:\From Github\dianmq\obj\Debug\点名器.pdb
+E:\From Github\dianmq\obj\Debug\点名器.Properties.Resources.resources
+E:\From Github\dianmq\obj\Debug\点名器.csproj.CoreCompileInputs.cache
+E:\From Github\dianmq\bin\Debug\path.xml
+E:\From Github\dianmq\bin\Debug\点名器.exe.config
+E:\From Github\dianmq\bin\Debug\点名器.exe.manifest
+E:\From Github\dianmq\bin\Debug\点名器.application
+E:\From Github\dianmq\bin\Debug\点名器.exe
+E:\From Github\dianmq\bin\Debug\点名器.pdb
+E:\From Github\dianmq\obj\Debug\点名器.exe.manifest
+E:\From Github\dianmq\obj\Debug\点名器.application
