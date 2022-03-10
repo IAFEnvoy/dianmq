@@ -4,7 +4,7 @@ using System.Text;
 
 namespace 点名器
 {
-    class txtcodes
+    internal class txtcodes
     {
         public static Encoding GetType123(string FILE_NAME)
         {
@@ -25,17 +25,11 @@ namespace 点名器
             int.TryParse(fs.Length.ToString(), out i);
             byte[] ss = r.ReadBytes(i);
             if (IsUTF8Bytes(ss) || (ss[0] == 0xEF && ss[1] == 0xBB && ss[2] == 0xBF))
-            {
                 reVal = Encoding.UTF8;
-            }
             else if (ss[0] == 0xFE && ss[1] == 0xFF && ss[2] == 0x00)
-            {
                 reVal = Encoding.BigEndianUnicode;
-            }
             else if (ss[0] == 0xFF && ss[1] == 0xFE && ss[2] == 0x41)
-            {
                 reVal = Encoding.Unicode;
-            }
             r.Close();
             return reVal;
 
@@ -53,30 +47,22 @@ namespace 点名器
                     {
                         //判断当前
                         while (((curByte <<= 1) & 0x80) != 0)
-                        {
                             charByteCounter++;
-                        }
                         //标记位首位若为非0 则至少以2个1开始 如:110XXXXX...........1111110X
                         if (charByteCounter == 1 || charByteCounter > 6)
-                        {
                             return false;
-                        }
                     }
                 }
                 else
                 {
                     //若是UTF-8 此时第一位必须为1
                     if ((curByte & 0xC0) != 0x80)
-                    {
                         return false;
-                    }
                     charByteCounter--;
                 }
             }
             if (charByteCounter > 1)
-            {
                 throw new Exception("非预期的byte格式");
-            }
             return true;
         }
     }

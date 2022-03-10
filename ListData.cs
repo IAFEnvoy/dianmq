@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace 点名器
 {
-    class ListData
+    internal class ListData
     {
         private string filehash;
         private List<int> keys;
@@ -23,10 +22,12 @@ namespace 点名器
             while (!sr.EndOfStream)
             {
                 string s = sr.ReadLine();
-                if (!string.IsNullOrEmpty(s)) names.Add(s);
+                if (!string.IsNullOrEmpty(s))
+                    names.Add(s);
             }
             sr.Close();
-            for (int i = 0; i < names.Count() / 2; i++) keys.Add(-1);
+            for (int i = 0; i < names.Count() / 2; i++)
+                keys.Add(-1);
         }
         public ListData(string filename, List<int> pkeys)//作为旧文件输入
         {
@@ -37,7 +38,8 @@ namespace 点名器
             while (!sr.EndOfStream)
             {
                 string s = sr.ReadLine();
-                if (!string.IsNullOrEmpty(s)) names.Add(s);
+                if (!string.IsNullOrEmpty(s))
+                    names.Add(s);
             }
             sr.Close();
             keys = pkeys;
@@ -72,9 +74,7 @@ namespace 点名器
         {
             string output = filename + "\n" + filehash + "\n";
             for (int i = 0; i < keys.Count; i++)
-            {
                 output += keys[i].ToString() + " ";
-            }
             return output + "\n";
         }
     }

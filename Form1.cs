@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace 点名器
@@ -16,14 +11,16 @@ namespace 点名器
         {
             InitializeComponent();
         }
-        List<ListData> data = new List<ListData>();
+
+        private List<ListData> data = new List<ListData>();
         public static string configPath = Application.StartupPath + @"\settings.config";
 
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "文本文档(*.txt)|*.txt";
-            ofd.ShowDialog();
+            if (!(ofd.ShowDialog() == DialogResult.OK))
+                return;
             string s = ofd.FileName;
             listBox2.Items.Add(s);
             data.Add(new ListData(s));
@@ -37,18 +34,21 @@ namespace 点名器
                 listBox2.Items.RemoveAt(listBox2.SelectedIndex);
             }
         }
-        int number = 0;
+
+        private int number = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
             number = number + 1;
-            if (number == 2) timer1.Enabled = false;
+            if (number == 2)
+                timer1.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listBox1.Items.Count == 0) { 
-                MessageBox.Show("你还木有选择名单哦~"); 
-                return; 
+            if (listBox1.Items.Count == 0)
+            {
+                MessageBox.Show("你还木有选择名单哦~");
+                return;
             }
             int count;
             Random rd = new Random(DateTime.Now.Millisecond);
@@ -58,17 +58,25 @@ namespace 点名器
                 label1.Text = listBox1.Items[count].ToString();
                 number = 1;
                 timer1.Enabled = true;
-                while (timer1.Enabled == true) Application.DoEvents();
+                while (timer1.Enabled == true)
+                    Application.DoEvents();
             }
             count = rd.Next(0, listBox1.Items.Count);
             int final = data[listBox2.SelectedIndex].getValid(count);
-            data[listBox2.SelectedIndex].addKey(final);
-            label1.Text = data[listBox2.SelectedIndex].getName(final);
+            if (listBox1.SelectedIndex != -1)
+                label1.Text = listBox1.Items[final].ToString();
+            else
+            {
+                data[listBox2.SelectedIndex].addKey(final);
+                label1.Text = data[listBox2.SelectedIndex].getName(final);
+            }
         }
 
         private void listBox2_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedIndex < 0) return;
+            if (listBox2.SelectedIndex < 0)
+                return;
+
             listBox1.Items.Clear();
             string s = (string)listBox2.Items[listBox2.SelectedIndex];
             if (!File.Exists(s))

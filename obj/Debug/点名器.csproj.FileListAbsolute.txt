@@ -42,3 +42,19 @@ E:\From Github\dianmq\bin\Debug\点名器.exe
 E:\From Github\dianmq\bin\Debug\点名器.pdb
 E:\From Github\dianmq\obj\Debug\点名器.exe.manifest
 E:\From Github\dianmq\obj\Debug\点名器.application
+C:\Users\Administrator\sources\dianmq\bin\Debug\path.xml
+C:\Users\Administrator\sources\dianmq\bin\Debug\点名器.exe.config
+C:\Users\Administrator\sources\dianmq\bin\Debug\点名器.exe.manifest
+C:\Users\Administrator\sources\dianmq\bin\Debug\点名器.application
+C:\Users\Administrator\sources\dianmq\bin\Debug\点名器.exe
+C:\Users\Administrator\sources\dianmq\bin\Debug\点名器.pdb
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.csproj.AssemblyReference.cache
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.Form1.resources
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.Properties.Resources.resources
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.csproj.GenerateResource.cache
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.exe.manifest
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.application
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.exe
+C:\Users\Administrator\sources\dianmq\obj\Debug\点名器.pdb
